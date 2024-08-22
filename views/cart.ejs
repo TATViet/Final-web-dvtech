@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"> <!-- Added Bootstrap Icons -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">DVtech</a>
+            <div class="navbar-nav ms-auto">
+                <form action="/productDetails" method="get">
+                    <button class="btn btn-outline-success">
+                        <i class="bi bi-cart3"></i> Shopping
+                    </button>
+                </form>
+                <a href="/login" class="btn btn-outline-success">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Your Shopping Cart</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% Products.forEach(item => { %>
+                <tr>
+                    <td><%= item.Product_name %></td>
+                    <td><%= item.Product_price %></td>
+                    <td>
+                        <input type="number" 
+                               value="<%= item.Product_quantity %>" 
+                               class="form-control" 
+                               style="width: 60px;"
+                               min="0">
+                    </td>
+                    <td><%= item.Product_price * item.Product_quantity %>VND</td> 
+                    <td><form action="/cart_customer_delet/<%= item.Product_name %>" method="get" style="display:inline;">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit">Xóa</button>
+                      </form> </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <p class="lead">Total in all: <%= totalPrice %>VND</p>
+        <div class="d-flex justify-content-between">
+            <form action="/cart_customer_deletall" method="get" style="display:inline;">
+                <input type="hidden" name="_method">
+                <button class="btn btn-danger">Clear Cart</button>
+              </form>
+            <button class="btn btn-primary ms-auto">Checkout</button>
+        </div>
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

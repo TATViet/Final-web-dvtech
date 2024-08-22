@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .signup-container h4 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2E28AE;
+        }
+        .btn-primary {
+            background-color: #2E28AE;
+            border-color: #2E28AE;
+        }
+        .btn-primary:hover {
+            background-color: #1e1b6a;
+            border-color: #1e1b6a;
+        }
+        .form-control::placeholder {
+            color: #6c757d;
+        }
+        .signup-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .signup-text a {
+            color: #2E28AE;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h4>Create an Account</h4>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <input type="checkbox" id="IsAD" name="IsAD">
+            <label for="IsAD">Admin hay ko</label>
+
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            <p class="signup-text">Already have an account? <a href="/login">Log in</a></p>
+            <p class="signup-text">Back to <a href="/">Main Page</a></p>
+        </form>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
