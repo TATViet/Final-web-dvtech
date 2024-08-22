@@ -4,11 +4,22 @@ const Product = require("../models/Payment");
 
 // Giả lập dữ liệu của cart (menu)
 let cart = [
-  { id: 1, name: 'IPHONE 14 (Light Blue)', price: '18000000', Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoY4f4CH7WZLG_3z7lGaManU8zi3tBuTEjYg&s' },
+  { id: 1, name: 'IPHONE 14', price: '18000000', Image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoY4f4CH7WZLG_3z7lGaManU8zi3tBuTEjYg&s' },
   { id: 2, name: 'Samsung Galaxy S24 Ultra', price: '27990000', Image: 'https://samcenter.vn/images/thumbs/0006347_samsung-galaxy-s24-ultra.jpeg' },
   { id: 3, name: 'Galaxy Z Fold 6', price: '41990000', Image: 'https://samcenter.vn/images/thumbs/0007191_xam_550.png' },
   { id: 4, name: 'Galaxy Z Flip 6', price: '26990000', Image: 'https://samcenter.vn/images/thumbs/0007200_xanh-blue_550.png' },
   { id: 5, name: 'Galaxy Watch7 (Bluetooth)', price: '7990000', Image: 'https://samcenter.vn/images/thumbs/0007230_kem_550.png' },
+  { id: 6, name: 'Tecno Pova 6 Neo', price: '4100000', Image: 'https://cdn.kalvo.com/uploads/img/large/60203-tecno-pova-6-neo.jpg' },
+  { id: 7, name: 'Xiaomi Redmi 13', price: '4290000', Image: 'https://cdn.tgdd.vn/Products/Images/42/325800/redmi-13-pink-1.jpg' },
+  { id: 8, name: 'Xiaomi 14', price: '21490000', Image: 'https://cdn.tgdd.vn/Products/Images/42/298538/xiaomi-14-xanh-1.jpg' },
+  { id: 9, name: 'Xiaomi POCO M6', price: '21490000', Image: 'https://cdn.tgdd.vn/Products/Images/42/327343/xiaomi-poco-m6-purple-1-1.jpg' },
+  { id: 10, name: 'Vsmart Star 5', price: '1890000', Image: 'https://dienthoaihay.vn/images/products/2021/09/12/large/vsmart-star-5-den_1631431476.jpg.jpg' },
+  { id: 11, name: 'Nokia 220 4G', price: '990000', Image: 'https://cdn.tgdd.vn/Products/Images/42/207956/nokia-220-4g-cam-1.jpg' },
+  { id: 12, name: 'Nokia 110 4G Pro ', price: '720000', Image: 'https://cdn.tgdd.vn/Products/Images/42/311034/nokia-110-4g-pro-tim-1.jpg' },
+  { id: 13, name: 'Baseus Encok S12', price: '549000', Image: 'https://product.hstatic.net/1000152881/product/baseus_encok_s12_01_8240138f98b345c69ade9d1b6cfc33bf.jpg' },
+  { id: 14, name: 'AJAZZ AK40 Black Brown/Blue switch', price: '600000', Image: 'https://maytinhbinhduong.com/wp-content/uploads/2022/04/40386_ajazz_ak40_black__2_.jpg' },
+  { id: 15, name: 'iPad Gen 10', price: '8,800,000', Image: 'https://bizweb.dktcdn.net/thumb/1024x1024/100/471/129/products/1-64bb0a10-af3d-4366-ac0e-165c82f39ca6.png?v=1704515792673' },
+  { id: 16, name: 'aptop gaming Lenovo LOQ', price: '20690000', Image: 'https://product.hstatic.net/200000722513/product/loq_15irx9_ct1_03_e060c7219ed745ce83017d95799d960e_1024x1024.png' },
 ];
 
 // Showing cart page
