@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../models/Payment");
+const Product = require("../models/Product");
 
 // Giả lập dữ liệu của cart (menu)
 let cart = [
